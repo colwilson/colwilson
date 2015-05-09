@@ -1,2 +1,0 @@
-# terse-words
-A Blog

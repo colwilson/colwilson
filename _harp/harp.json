@@ -1,0 +1,21 @@
+{
+  "domains": [""],
+  "globals": {
+    "site_title": "Sample Site",
+    "twitter": "#colwilson",
+    "site_url": "http://tersecol.com",
+    "adsense": {
+      "ca": "ca-pub-8143086736444913",
+      "slot": "2164410221"
+    },
+    "disqus": {
+      "enabled": false,
+      "shortname": ""
+    },
+    "sitemap": {
+      "enabled": true,
+      "changefreq": "daily"
+    }
+  }
+}
+

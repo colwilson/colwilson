@@ -1,0 +1,26 @@
+doctype
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="/favicon.ico?v=2") 
+    title #{ site_title }
+    link(rel="stylesheet", href="/assets/css/app.css")
+    link(rel="alternate", type="application/rss+xml", title="#{ site_title } RSS", href="/rss.xml")    
+
+  body(class="page-#{ current.path[0] } #{ current.path.join("-") }")
+    .container.main-content
+      .row
+        .col-sm-3.main
+          ins(class="adsbygoogle adsense-sidebar", style="display:block", data-ad-client="#{adsense.ca}", data-ad-slot="#{adsense.slot}")
+          script.
+            (adsbygoogle = window.adsbygoogle || []).push({})
+        .col-sm-6.main
+          article#content
+            != yield
+            != partial("_partials/comments")
+        .col-sm-offset-1.col-sm-2.aside
+          .icon
+          != partial("_partials/aside")
+    hr
+    != partial("_partials/footer")

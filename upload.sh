@@ -4,8 +4,8 @@ time harp compile
 echo zipping...
 tar cfz www.tgz www
 echo uploading...
-scp www.tgz root@$DIGITALOCEAN:
-ssh root@104.236.86.157 /bin/bash << EOF
+scp www.tgz root@${DIGITALOCEAN}:
+ssh root@${DIGITALOCEAN} /bin/bash << EOF
   rm -r www
   tar xvfz www.tgz
   cp -r www /var

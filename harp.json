@@ -6,7 +6,8 @@
     "site_url": "http://tersecol.com",
     "adsense": {
       "ca": "ca-pub-8143086736444913",
-      "slot": "2164410221"
+      "default_slot": "2164410221",
+      "mobile_slot": "2398082626"
     },
     "disqus": {
       "enabled": false,
@@ -18,4 +19,3 @@
     }
   }
 }
-

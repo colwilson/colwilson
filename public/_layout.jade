@@ -7,20 +7,25 @@ html(lang="en")
     title #{ site_title }
     link(rel="stylesheet", href="/assets/css/app.css")
     link(rel="alternate", type="application/rss+xml", title="#{ site_title } RSS", href="/rss.xml")    
+    script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
 
   body(class="page-#{ current.path[0] } #{ current.path.join("-") }")
+    .container.mobile-ad.hidden-md.hidden-lg
+      ins(class="adsbygoogle adsense-sidebar", style="display:block", data-ad-client="#{adsense.ca}", data-ad-slot="#{adsense.mobile_slot}")
+      script.
+        (adsbygoogle = window.adsbygoogle || []).push({})
     .container.main-content
       .row
-        .col-sm-3.main
-          ins(class="adsbygoogle adsense-sidebar", style="display:block", data-ad-client="#{adsense.ca}", data-ad-slot="#{adsense.slot}")
+        .col-md-2.hidden-xs.hidden-sm
+          ins(class="adsbygoogle adsense-sidebar", style="display:block", data-ad-client="#{adsense.ca}", data-ad-slot="#{adsense.default_slot}")
           script.
             (adsbygoogle = window.adsbygoogle || []).push({})
-        .col-sm-6.main
+        .col-md-7.main
           article#content
             != yield
             != partial("_partials/comments")
-        .col-sm-offset-1.col-sm-2.aside
-          .icon
+        .col-md-offset-1.col-md-2.aside
+          .icon.hidden-xs.hidden-sm
           != partial("_partials/aside")
     hr
     != partial("_partials/footer")
